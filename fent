@@ -1,0 +1,56 @@
+script_key="LUARMOR-KEY-HERE"; --// Run /script to get your key
+--
+getgenv().Euleon = {
+    Main = {
+        Enabled = true,
+        Intro = false,
+        PredictionType = "Euleon", --// "Roblox" or "Euleon"
+        TargetMode = "FOV", --// "FOV" or "Target"
+        UnlockOnKnock = true,
+        HitParts = {"Head", "HumanoidRootPart"},
+        ClosestToCursorHitpart = true,
+    },
+    SilentAim = {
+        Enabled = true,
+        TargetDot = false,
+        AntiGround = true,
+        Prediction = true,
+        PredictionAmmount = 0.165,
+        HitChance = 100
+    },
+    AimAssist = {
+        Enabled = true,
+        Prediction = true,
+        PredictionAmmount = 0.13,
+        Smoothing = {
+            Enabled = true,
+            SmoothnessAmount = 0.019,
+            StyleMethod = Enum.EasingStyle.Circular,
+            StyleMethod2 = Enum.EasingDirection.InOut,
+        }
+    },
+    FovSettings = {
+        Visible = true,
+        Filled = true,
+        Radius = 20,
+    },
+    GunSettings = {
+        Enabled = true,
+        DoubleBarrel = {["FOV"] = 15},
+        Rev = {["FOV"] = 6},
+        SMG = {["FOV"] = 5},
+        ShotGun = {["FOV"] = 15},
+        TacticalShotgun = {["FOV"] = 15},
+    },
+    Checks = {
+        Wall = true,
+        Visible = true,
+        ForceField = true,
+        Alive = true,
+        Knocked = true,
+    },
+    Keybinds = {
+        Target = "C",
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/662ad9ffea96231ab45ad69adb1250ba.lua"))()
